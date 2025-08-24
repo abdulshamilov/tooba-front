@@ -1,0 +1,270 @@
+/* Базовые стили для всех страниц */
+body {
+  margin: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Шапка */
+.site-header {
+  background: #307B75;   /* новый основной цвет */
+  color: white;
+  padding: 15px 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* 1. Flex для html и body */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2. Основной контейнер */
+main.main-content {
+  flex: 1; /* занимает всё доступное пространство */
+}
+
+/* 3. Подвал */
+.site-footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ====== Хедер при скролле ====== */
+.site-header.scrolled {
+  background: #245d58;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+/* ====== Бургер ====== */
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: #307B75;
+    padding: 20px;
+  }
+  .nav.active ul {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* ====== Анимация карточек ====== */
+.task-card, .volunteer-card, .fund-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+.task-card.visible, .volunteer-card.visible, .fund-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== Тёмная тема ====== */
+.dark-theme {
+  background: #222;
+  color: #eee;
+}
+.dark-theme .site-header {
+  background: #111;
+}
+.dark-theme .site-footer {
+  background: #111;
+}
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #307B75;
+  color: white;
+  cursor: pointer;
+}
+
+/* ====== Тост ====== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #307B75;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== Глобальные стили ====== */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  background: #f9f9fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ====== Хедер ====== */
+.site-header {
+  background: linear-gradient(135deg, #2fb58e, #1e7d5c);
+  color: white;
+  padding: 15px 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.site-header.scrolled {
+  background: linear-gradient(135deg, #1e7d5c, #145945);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.site-header .nav a {
+  color: white;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: color 0.3s, background 0.3s;
+}
+.site-header .nav a:hover {
+  background: rgba(255,255,255,0.15);
+  border-radius: 6px;
+}
+
+/* ====== Hero ====== */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #2fb58e, #1e7d5c);
+  color: white;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ====== Карточки ====== */
+.task-card, .volunteer-card, .fund-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.task-card:hover, .volunteer-card:hover, .fund-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Анимация появления */
+.task-card, .volunteer-card, .fund-card {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.task-card.visible, .volunteer-card.visible, .fund-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease-out;
+}
+
+/* ====== Кнопки ====== */
+.btn-respond, .theme-toggle {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-respond:hover, .theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ====== Тосты ====== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #2fb58e, #1e7d5c);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== Тёмная тема ====== */
+.dark-theme {
+  background: #181a1f;
+  color: #eee;
+}
+.dark-theme .site-header {
+  background: linear-gradient(135deg, #0f3b2c, #0a241a);
+}
+.dark-theme .task-card, .dark-theme .volunteer-card, .dark-theme .fund-card {
+  background: #22252b;
+  color: #ddd;
+}
+.dark-theme .btn-respond, .dark-theme .theme-toggle {
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Геймификация — Tooba</title>
+  <link rel="icon" href="/img/tooba.svg" type="image/svg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gamification.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">Tooba</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="tasks.html">Задачи</a></li>
+        <li><a href="volunteers.html">Волонтёры</a></li>
+        <li><a href="gamification.html" class="active">Геймификация</a></li>
+        <li><a href="community.html">Сообщество</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content container">
+  <h2>Геймификация</h2>
+  <div class="gamification-stats">
+    <div class="stat-card">
+      <h3>Баллы</h3>
+      <p>Вы заработали: <strong id="points">0</strong></p>
+    </div>
+    <div class="stat-card">
+      <h3>Уровень</h3>
+      <p>Текущий: <strong id="level">0</strong></p>
+    </div>
+    <div class="stat-card">
+      <h3>Достижения</h3>
+      <ul id="achievements">
+        <!-- Достижения будут добавляться через JS -->
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Tooba | Все права защищены</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

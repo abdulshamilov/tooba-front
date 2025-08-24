@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задачи — Tooba</title>
+  <link rel="icon" href="/img/tooba.svg" type="image/svg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/tasks.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">Tooba</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="tasks.html">Задачи</a></li>
+        <li><a href="volunteers.html" class="active">Волонтёры</a></li>
+        <li><a href="gamification.html">Геймификация</a></li>
+        <li><a href="community.html">Сообщество</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content container">
+  <h2>Список задач</h2>
+
+  <div class="filters">
+    <select>
+      <option>Все категории</option>
+      <option>Социальные</option>
+      <option>Экология</option>
+      <option>Образование</option>
+    </select>
+    <select>
+      <option>Все статусы</option>
+      <option>Открытые</option>
+      <option>В процессе</option>
+      <option>Завершённые</option>
+    </select>
+  </div>
+
+
+  <div class="task-list">
+    <div class="task-card">
+      <img src="/img/cat.jpg" alt="Приют для животных">
+      <h3>Помочь в приюте для животных</h3>
+      <p>Нужна помощь с уборкой и кормлением животных.</p>
+      <button class="btn">Подробнее</button>
+    </div>
+
+    <div class="task-card">
+      <img src="/img/breakingbad.jpg" alt="Уроки химии">
+      <h3>Уроки химии для школьников</h3>
+      <p>Требуется волонтёр для онлайн-занятий 2 раза в неделю.</p>
+      <button class="btn">Подробнее</button>
+    </div>
+
+    <div class="task-card">
+      <img src="/img/ussr.jpg" alt="Субботник в парке">
+      <h3>Субботник в парке</h3>
+      <p>Уборка территории, посадка деревьев.</p>
+      <button class="btn">Подробнее</button>
+    </div>
+
+    <div class="task-card">
+      <img src="/img/generator.jpg" alt="Туба">
+      <h3>Генератор для офиса</h3>
+      <p>Нужен генератор для хакатона в офисе Туба.</p>
+      <button class="btn">Подробнее</button>
+    </div>
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Tooba | Все права защищены</p>
+  </div>
+</footer>
+<!-- Модальное окно -->
+<div id="taskModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <img id="modalImg" src="" alt="" />
+    <p id="modalDesc"></p>
+    <button id="respondBtn" class="btn">Откликнуться</button>
+  </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="taskModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <img id="modalImg" src="" alt="" />
+    <p id="modalDesc"></p>
+
+    <!-- Кнопка откликнуться -->
+    <button id="respondBtn" class="btn">Откликнуться</button>
+
+    <!-- Форма волонтера (скрыта) -->
+    <form id="volunteerForm" style="display:none; margin-top:20px;">
+      <label for="volName">Имя:</label>
+      <input type="text" id="volName" name="volName" required />
+
+      <label for="volEmail">Email:</label>
+      <input type="email" id="volEmail" name="volEmail" required />
+
+      <label for="volPhone">Телефон:</label>
+      <input type="tel" id="volPhone" name="volPhone" required />
+
+      <button type="submit" class="btn">Отправить заявку</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/tasks.js"></script>
+
+</body>
+</html>

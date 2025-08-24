@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробнее — Tooba</title>
+    <link rel="icon" href="img/tooba.svg" type="image/svg">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">Tooba</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="tasks.html" class="active">Задачи</a></li>
+                    <li><a href="volunteers.html">Волонтёры</a></li>
+                    <li><a href="gamification.html">Геймификация</a></li>
+                    <li><a href="community.html">Сообщество</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Контент -->
+    <main class="main-content container">
+        <h2>Благоустройство парка</h2>
+        <img src="img/playground.jpg" alt="Фото проекта" class="details-image">
+
+        <p>
+            В этом проекте волонтёры помогают благоустроить детскую площадку: 
+            покраска игровых элементов, установка новых лавочек и уборка территории.
+        </p>
+
+        <div class="details-meta">
+            <p><strong>Категория:</strong> Экология</p>
+            <p><strong>Локация:</strong> Парк им. Гагарина</p>
+            <p><strong>Нужно волонтёров:</strong> 20</p>
+            <p><strong>Уже записались:</strong> 12</p>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" style="width: 60%">12/20</div>
+        </div>
+
+        <button class="btn">Записаться</button>
+    </main>
+
+    <!-- Похожие задачи -->
+    <section class="related-tasks container">
+        <h3>Похожие задачи</h3>
+        <div class="task-list">
+            <div class="task-card">
+                <h4>Посадка деревьев</h4>
+                <p>Экология</p>
+                <a href="details.html" class="btn">Подробнее</a>
+            </div>
+            <div class="task-card">
+                <h4>Уборка двора</h4>
+                <p>Социальные</p>
+                <a href="details.html" class="btn">Подробнее</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

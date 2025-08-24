@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сообщество — Tooba</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/community.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">Tooba</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="tasks.html">Задачи</a></li>
+        <li><a href="volunteers.html" class="active">Волонтёры</a></li>
+        <li><a href="gamification.html">Геймификация</a></li>
+        <li><a href="community.html">Сообщество</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main-content container">
+  <h2>Форум сообщества</h2>
+
+  <!-- Форма создания новой темы -->
+  <div class="new-post-form">
+    <input type="text" id="topicTitle" placeholder="Название темы">
+    <input type="text" id="topicAuthor" placeholder="Ваше имя">
+    <textarea id="topicContent" placeholder="Текст темы"></textarea>
+    <button id="addTopicBtn">Создать тему</button>
+  </div>
+
+  <!-- Список тем -->
+  <div class="community-posts" id="postsContainer">
+    <!-- Темы добавляются сюда через JS -->
+  </div>
+</main>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Tooba | Все права защищены</p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+
+<script src="js/forum.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background: url("../img/volunteers-bg.jpg") no-repeat center/cover;
+  color: #222; /* цвет текста по умолчанию для светлой темы */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* лёгкое светлое наложение для белой темы */
+  z-index: 0;
+}
+
+.hero h2,
+.hero p,
+.hero .btn {
+  position: relative;
+  z-index: 1; /* поверх наложения */
+}
+
+/* Тёмная тема */
+body.dark-theme .hero {
+  color: white;
+}
+
+body.dark-theme .hero::before {
+  background: rgba(0, 0, 0, 0.5); /* тёмное наложение для читаемости текста */
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #e65c00;
+}
